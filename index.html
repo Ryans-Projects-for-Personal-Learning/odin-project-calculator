@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="header">Calculator</h1>
+        <p>Just a basic calculator app. It is able to perform basic operations.</p>
+        <div id="calculatorContainer">
+            <div id = "displayScreen">
+                <p id="displayTextError">&nbsp;</p>
+                <p id="displayText">0</p>
+            <div id = "buttonContainer">
+            <div id="eraseAndClearContainer">
+                <button class="eraseAndClearButton" onclick="eraseChar()">Erase</button>
+                <button class="eraseAndClearButton" onclick="clearDisplay()">Clear</button>
+            </div>
+                <div id="numButtonContainer">
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">7</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">8</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">9</button>
+                    <button class="calculatorButton operatorButton" onclick="processInput(document.getElementById('displayText').innerText,'÷')">÷</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">4</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">5</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">6</button>
+                    <button class="calculatorButton operatorButton" onclick="processInput(document.getElementById('displayText').innerText,'×')">×</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">1</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">2</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">3</button>
+                    <button class="calculatorButton operatorButton" onclick="processInput(document.getElementById('displayText').innerText,'-')">-</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">0</button>
+                    <button class="calculatorButton numberButton" onclick="writeChar(this.innerText)">.</button>
+                    <button class="calculatorButton evaluateButton" onclick="operate(document.getElementById('displayText').innerText)">=</button>
+                    <button class="calculatorButton operatorButton" onclick="processInput(document.getElementById('displayText').innerText,'+')">+</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
